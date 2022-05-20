@@ -1,0 +1,13 @@
+//BUTTON
+.btn{
+    @include btn;
+    @include box-shadow;
+    padding: 15px 20px;
+
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: all 200ms;
+        @include box-shadow-hover;
+    }
+}

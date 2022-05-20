@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding-left: 0;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.badge {
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #353535;
+}
+footer > h1 {
+  margin: 20px 0 0 20px;
+  color: #FFF;
+}
+footer > ul {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+footer > ul > li {
+  margin-bottom: 0;
+}
+footer > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer > ul > li > a:hover > p {
+  transition: all 300ms;
+  color: #c9abee;
+}
+footer > ul > li > a:hover > i {
+  transition: all 300ms;
+  color: #c9abee;
+}
+footer > ul > li > a > i {
+  margin: 0 10px 0 0;
+  color: #FFF;
+}
+footer > ul > li > a > p {
+  margin: 5px;
+  color: #FFF;
+}
+
+.btn {
+  border: none;
+  border-radius: 2em;
+  color: #FFF;
+  background: linear-gradient(349deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
+  box-shadow: 0px 5px 5px #d3d3d3;
+  padding: 15px 20px;
+}
+.btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 200ms;
+  box-shadow: 0 6px 3px #d3d3d3;
+}
+
+.logo-container {
+  width: 100%;
+}
+.logo-container > .logo {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  box-shadow: inset 0 2px 5px #d3d3d3;
+}
+.localisation > i {
+  margin-right: 10px;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  background-color: #f6f6f6;
+}
+.explore__title {
+  text-align: center;
+  margin: 30px 20px 0;
+}
+.explore__text {
+  text-align: center;
+  margin: 20px;
+}
+
+.working {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.working__card {
+  position: relative;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin: 0 auto 20px auto;
+  border-radius: 1.2em;
+  background-color: #f6f6f6;
+  box-shadow: 0px 5px 5px #d3d3d3;
+}
+.working__card:hover {
+  box-shadow: 0 6px 3px #d3d3d3;
+  transition: all 300ms;
+  background-color: #e4d5f6;
+}
+.working__card:hover > i {
+  transition: all 200ms;
+  color: #9356DC;
+}
+.working__card > p {
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356DC;
+}
+.working__card > i {
+  font-size: 1.6em;
+  margin-right: 15px;
+  color: #7e7e7e;
+}
+
+.restaurants {
+  width: 100%;
+  margin: auto;
+  padding: 20px 0 50px 0;
+  background-color: #f6f6f6;
+}
+.restaurants > h2 {
+  margin-left: 30px;
+}
+
+.container {
+  height: 275px;
+  width: 90%;
+  margin: auto auto 20px auto;
+  border-radius: 1em;
+  box-shadow: 0px 5px 5px #d3d3d3;
+}
+.container__img {
+  position: relative;
+}
+.container__img > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1em 1em 0 0;
+}
+.container__img > .badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 0.2em;
+  color: #0e8f70;
+  background-color: #99E2D0;
+}
+.container__body {
+  position: relative;
+  height: 75px;
+}
+.container__body__text > h3 {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+.container__body__text > p {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.container__body__icon {
+  position: absolute;
+  font-size: 1.6em;
+  top: 15px;
+  right: 20px;
+}
+.container__body__icon:hover > .heart--empty {
+  transition: all 1000ms ease;
+  opacity: 0;
+}
+.container__body__icon:hover > .heart--fill {
+  transition: opacity 250ms, font-size 500ms;
+  font-size: 1em;
+  opacity: 1;
+}
+.container__body__icon > .heart--fill {
+  position: absolute;
+  left: 50%;
+  font-size: 0px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $footer-bg-clr;
+
+    &>h1{
+        margin: 20px 0 0 20px;
+        color: $footer-txt-color;
+    }
+    
+    &>ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        
+        &>li{
+            margin-bottom: 0;
+
+            &>a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &:hover > p{
+                    transition: all 300ms;
+                    color: lighten($color: $color-primary, $amount: 20%);
+                }
+
+                &:hover > i{
+                    transition: all 300ms;
+                    color: lighten($color: $color-primary, $amount: 20%);
+                }
+                
+
+                &>i{
+                    margin: 0 10px 0 0;
+                    color: $footer-txt-color;
+                }
+
+                &>p{
+                    margin: 5px;
+                    color: $footer-txt-color;
+                }
+            }              
+        }
+    }
+}

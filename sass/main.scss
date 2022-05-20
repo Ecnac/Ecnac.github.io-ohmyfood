@@ -1,0 +1,180 @@
+@import "Base/_general-settings";
+@import "Base/_fonts";
+@import "Utils/_variables";
+@import "Layout/_layout";
+@import "Utils/_mixin";
+@import "Components//_components";
+
+
+.logo-container{
+    width: 100%;
+    &>.logo{
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+    }
+}
+
+.localisation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    box-shadow: inset 0 2px 5px $shadow-clr;
+
+    &>i{
+        margin-right: 10px;
+    }
+}
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: $bg-color;
+
+    &__title{
+        text-align: center;
+        margin: 30px 20px 0;
+    }
+
+    &__text{
+        text-align: center;
+        margin: 20px
+    }
+}
+
+.working{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+
+    &__card{
+        position: relative;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        margin: 0 auto 20px auto;
+        border-radius: 1.2em;
+        background-color: $bg-color;
+        @include box-shadow;
+
+        &:hover{
+            @include box-shadow-hover;
+            transition: all 300ms;
+            background-color: lighten($color: $color-primary, $amount: 30%);
+        }
+
+        &:hover > i{
+            transition: all 200ms;
+            color: $color-primary;
+        }
+
+        
+        &>p{
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            border-radius: 50%;
+            color: white;
+            background-color: $color-primary;
+         }
+        
+        &>i{
+            font-size: 1.6em;
+            margin-right: 15px;
+            color: $i-clr;
+        }
+    }
+}
+
+.restaurants{
+    width: 100%;
+    margin: auto;
+    padding: 20px 0 50px 0;
+    background-color: $bg-color;
+
+    &>h2{
+        margin-left: 30px;
+    }
+}
+
+.container{
+    height: 275px;
+    width: 90%;
+    margin: auto auto 20px auto;
+    border-radius: $card-border-radius;
+    @include box-shadow;
+
+    &__img{
+        position: relative;
+
+        &>img{
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: $card-img-border-radius;        
+        }
+
+        &>.badge{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            border-radius: 0.2em;
+            color: $badge-txt;
+            background-color: $color-tertiary
+        }
+    }
+    &__body{
+        position: relative;
+        height: 75px;
+
+        &__text>h3{
+            position: absolute;
+            top: -10px;  
+            left: 10px;       
+        }
+
+        &__text>p{
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+
+        &__icon{
+            position: absolute;
+            font-size: 1.6em;
+            top: 15px;
+            right: 20px;
+                                   
+            &:hover > .heart--empty{
+                transition: all 1000ms ease;
+                opacity: 0;
+            }
+            &:hover > .heart--fill{       
+                transition: opacity 250ms, font-size 500ms;
+                font-size: 1em;    
+                opacity: 1;
+            }           
+        }
+
+        &__icon>.heart--fill{
+            position: absolute;
+            left: 50%;
+            font-size: 0px;
+            transform: translateX(-50%);
+            background: $heart-grd;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;                        
+        }
+    }     
+}
+
+
+
+

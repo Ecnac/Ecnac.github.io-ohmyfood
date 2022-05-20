@@ -1,0 +1,18 @@
+
+// BUTTON
+@mixin btn{
+    border: none;
+    border-radius: 2em;
+    color: $btn-txt-clr;
+    background: $grd
+    
+}
+
+//SHADOW
+@mixin box-shadow{
+    box-shadow: 0px 5px 5px $shadow-clr;
+}
+
+@mixin box-shadow-hover{
+    box-shadow: 0 6px 3px $shadow-clr;
+}
