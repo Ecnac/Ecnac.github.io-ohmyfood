@@ -3,7 +3,7 @@
 @import "Utils/_variables";
 @import "Layout/_layout";
 @import "Utils/_mixin";
-@import "Components//_components";
+@import "Components/_components";
 
 
 .logo-container{
@@ -51,6 +51,12 @@
     flex-direction: column;
     width: 90%;
     margin: auto;
+    
+    &>ul{
+        @media screen and (min-width: 1024px){
+        display: flex;
+        }
+    }
 
     &__card{
         position: relative;
@@ -62,6 +68,10 @@
         border-radius: 1.2em;
         background-color: $bg-color;
         @include box-shadow;
+
+        @media screen and (min-width: 1024px) {
+            width: 30%;           
+        }
 
         &:hover{
             @include box-shadow-hover;
@@ -98,16 +108,34 @@
     background-color: $bg-color;
 
     &>h2{
-        margin-left: 30px;
+        margin-left: 6%;
+    }
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     height: 275px;
     width: 90%;
     margin: auto auto 20px auto;
     border-radius: $card-border-radius;
     @include box-shadow;
+
+    &:hover{
+        @include box-shadow-hover;
+        transform: scale(1.05);
+        transition: all 200ms;
+    }
 
     &__img{
         position: relative;
@@ -172,7 +200,11 @@
             -webkit-text-fill-color: transparent;
             opacity: 0;                        
         }
-    }     
+    }   
+    
+    @media screen and (min-width: 1024px){
+        width: 45%;
+    }
 }
 
 
