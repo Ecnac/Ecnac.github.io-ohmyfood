@@ -11,3 +11,32 @@
         @include box-shadow-hover;
     }
 }
+
+//HEART ICON
+.heart-icon{
+    position: absolute;
+    font-size: 1.6em;
+    top: 20px;
+    right: 20px;
+                           
+    &:hover > .heart--empty{
+        transition: all 1000ms ease;
+        opacity: 0;
+    }
+    &:hover > .heart--fill{       
+        transition: opacity 250ms, font-size 500ms;
+        font-size: 1em;    
+        opacity: 1;
+    }           
+}
+
+.heart-icon>.heart--fill{
+    position: absolute;
+    left: 50%;
+    font-size: 0px;
+    transform: translateX(-50%);
+    background: $heart-grd;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;                        
+}

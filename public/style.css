@@ -26,11 +26,31 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
   font-weight: 500;
 }
 
 .badge {
   font-weight: 500;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header > .return-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 1.5em;
+}
+header.logo-container {
+  width: 100%;
+}
+header.logo-container > .logo {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
 }
 
 footer {
@@ -90,6 +110,33 @@ footer > ul > li > a > p {
   cursor: pointer;
   transition: all 200ms;
   box-shadow: 0 6px 3px #d3d3d3;
+}
+
+.heart-icon {
+  position: absolute;
+  font-size: 1.6em;
+  top: 20px;
+  right: 20px;
+}
+.heart-icon:hover > .heart--empty {
+  transition: all 1000ms ease;
+  opacity: 0;
+}
+.heart-icon:hover > .heart--fill {
+  transition: opacity 250ms, font-size 500ms;
+  font-size: 1em;
+  opacity: 1;
+}
+
+.heart-icon > .heart--fill {
+  position: absolute;
+  left: 50%;
+  font-size: 0px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .logo-container {
@@ -245,35 +292,115 @@ footer > ul > li > a > p {
   top: 20px;
   left: 10px;
 }
-.container__body__icon {
-  position: absolute;
-  font-size: 1.6em;
-  top: 15px;
-  right: 20px;
-}
-.container__body__icon:hover > .heart--empty {
-  transition: all 1000ms ease;
-  opacity: 0;
-}
-.container__body__icon:hover > .heart--fill {
-  transition: opacity 250ms, font-size 500ms;
-  font-size: 1em;
-  opacity: 1;
-}
-.container__body__icon > .heart--fill {
-  position: absolute;
-  left: 50%;
-  font-size: 0px;
-  transform: translateX(-50%);
-  background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-}
 @media screen and (min-width: 1024px) {
   .container {
     width: 45%;
   }
+}
+
+.banner {
+  max-height: 30em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  margin-top: -4em;
+  padding-bottom: 30px;
+  border-radius: 2em 2em 0 0;
+  background-color: #f6f6f6;
+  position: relative;
+}
+.menu__title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 20px;
+}
+.menu__title > h1 {
+  margin: 0.6em 0;
+}
+
+.submenus {
+  position: relative;
+  width: 95%;
+  margin: 0 0 30px 10px;
+}
+
+.submenu__type {
+  position: relative;
+  margin: 0 0 30px 10px;
+}
+.submenu__type::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 15px;
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.submenu__card {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px 0;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0px 5px 5px #d3d3d3;
+}
+.submenu__card:hover > .validation-container {
+  width: 80px;
+  transition: all 300ms ease-in-out;
+}
+.submenu__card:hover > .validation-container > .validation-icon {
+  transform: rotate(360deg);
+  transition: all 400ms;
+  animation-fill-mode: both;
+  margin-right: 0;
+}
+.submenu__card__content {
+  width: 80%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.submenu__card__content > h3, .submenu__card__content p {
+  margin: 10px 0px 10px 20px;
+}
+.submenu__card__price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 20%;
+  font-weight: 500;
+  padding-left: 0.5em;
+  margin: 0 20px 11px 0;
+}
+.submenu__card .validation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 0;
+  background-color: #99E2D0;
+  border-radius: 0 1em 1em 0;
+}
+.submenu__card .validation-icon {
+  display: flex;
+  padding: 4px 5px 4px 5px;
+  border-radius: 2em;
+  margin-right: -30px;
+  background-color: #FFF;
+  color: #99E2D0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
 @import "Utils/_mixin";
 @import "Components/_components";
 
-
+// HEADER
 .logo-container{
     width: 100%;
     &>.logo{
@@ -15,6 +15,7 @@
     }
 }
 
+//LOCALISATION
 .localisation{
     display: flex;
     align-items: center;
@@ -27,6 +28,7 @@
     }
 }
 
+//EXPLORE
 .explore{
     display: flex;
     flex-direction: column;
@@ -46,6 +48,8 @@
     }
 }
 
+
+//WORKING
 .working{
     display: flex;
     flex-direction: column;
@@ -101,6 +105,8 @@
     }
 }
 
+
+//RESTAURANTS
 .restaurants{
     width: 100%;
     margin: auto;
@@ -172,40 +178,133 @@
             top: 20px;
             left: 10px;
         }
-
-        &__icon{
-            position: absolute;
-            font-size: 1.6em;
-            top: 15px;
-            right: 20px;
-                                   
-            &:hover > .heart--empty{
-                transition: all 1000ms ease;
-                opacity: 0;
-            }
-            &:hover > .heart--fill{       
-                transition: opacity 250ms, font-size 500ms;
-                font-size: 1em;    
-                opacity: 1;
-            }           
-        }
-
-        &__icon>.heart--fill{
-            position: absolute;
-            left: 50%;
-            font-size: 0px;
-            transform: translateX(-50%);
-            background: $heart-grd;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;                        
-        }
-    }   
+    }      
     
     @media screen and (min-width: 1024px){
         width: 45%;
     }
 }
+
+//BANNER
+.banner{
+    max-height: 30em;
+    width: 100%;
+    object-fit: cover;
+}
+
+//MENU
+.menu{
+    margin-top: -4em;
+    padding-bottom: 30px;
+    border-radius: 2em 2em 0 0;
+    background-color: $bg-color;
+    position: relative;
+
+    &__title{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: 20px;
+        
+        &>h1{
+            margin: 0.6em 0;
+        }
+    }
+}
+
+.submenus{
+    position: relative;
+    width: 95%;
+    margin: 0 0 30px 10px;    
+}
+
+.submenu__type{
+    position: relative;
+        margin: 0 0 30px 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 15px;
+        width: 40px;
+        border-bottom: 3px solid $color-tertiary;
+    }
+}
+
+.submenu__card{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    @include box-shadow;
+
+    &:hover > .validation-container{
+        width: 80px;
+        transition: all 300ms ease-in-out;  
+
+        & > .validation-icon{
+            transform: rotate(360deg);
+            transition: all 400ms;
+            animation-fill-mode: both;
+            margin-right: 0;
+        }            
+    }  
+
+    &__content{
+        width: 80%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+        &>h3, p{
+            margin: 10px 0px 10px 20px;
+        }
+    }
+
+    &__price{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 20%;
+        font-weight: 500;
+        padding-left: 0.5em;
+        margin: 0 20px 11px 0;
+    }
+
+    .validation-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 0;
+        background-color: $color-tertiary;
+        border-radius: 0 1em 1em 0;
+    }
+
+    .validation-icon{
+        display: flex;
+        padding: 4px 5px 4px 5px;
+        border-radius: 2em;
+        margin-right: -30px;
+        background-color: #FFF;
+        color: $color-tertiary;
+    }
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+
 
 
 
