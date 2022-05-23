@@ -38,5 +38,6 @@
     background: $heart-grd;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;                        
+    opacity: 0;            
+    transition: opacity 500ms, font-size 500ms;            
 }
