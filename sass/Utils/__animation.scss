@@ -1,0 +1,35 @@
+//SLIDE MENU
+
+.delay1{
+    @include slide-menu;
+    animation-delay: $animation-delay;
+}
+
+.delay2{
+    @include slide-menu;
+    animation-delay: $animation-delay*2;
+
+}
+
+.delay3{
+    @include slide-menu;
+    animation-delay: $animation-delay*3;
+}
+
+.delay4{
+    @include slide-menu;
+    animation-delay: $animation-delay*4;
+}
+
+@keyframes slide{
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

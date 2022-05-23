@@ -16,3 +16,12 @@
 @mixin box-shadow-hover{
     box-shadow: 0 6px 3px $shadow-clr;
 }
+
+//SLIDE MENU TRANSITION
+@mixin slide-menu {
+    opacity: 0;
+    animation-name: slide;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.25,.17,0,.95)    
+}
