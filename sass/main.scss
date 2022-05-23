@@ -73,6 +73,7 @@
         border-radius: 1.2em;
         background-color: $bg-color;
         @include box-shadow;
+        transition: all 300ms;
 
         @media screen and (min-width: 1024px) {
             width: 30%;           
@@ -137,6 +138,7 @@
     margin: auto auto 20px auto;
     border-radius: $card-border-radius;
     @include box-shadow;
+    transition: all 200ms;
 
     &:hover{
         @include box-shadow-hover;
