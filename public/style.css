@@ -135,6 +135,7 @@ footer > ul > li > a > p {
   font-size: 0px;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;

@@ -36,6 +36,7 @@
     font-size: 0px;
     transform: translateX(-50%);
     background: $heart-grd;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;            
