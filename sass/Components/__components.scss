@@ -6,7 +6,7 @@
     transition: all 200ms;
 
     &:hover{
-        transform: scale(1.1);
+        filter: brightness(1.1);
         cursor: pointer;
         transition: all 200ms;
         @include box-shadow-hover;
@@ -34,6 +34,7 @@
 .heart-icon>.heart--fill{
     position: absolute;
     left: 50%;
+    bottom: 3px;
     font-size: 0px;
     transform: translateX(-50%);
     background: $heart-grd;
@@ -41,5 +42,5 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;            
-    transition: opacity 500ms, font-size 500ms;            
+    transition: opacity 1000ms, font-size 500ms;            
 }

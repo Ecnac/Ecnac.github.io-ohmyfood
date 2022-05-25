@@ -21,7 +21,7 @@
     border-radius: 50%;
     border: 6px solid $color-primary;
     border-color: $color-primary transparent $color-primary transparent;
-    animation: 1s linear 2 reverse both lds;
+    animation: 2s linear infinite reverse both lds;
 }
 
 .lds-medium{
@@ -31,8 +31,7 @@
     border-radius: 50%;
     border: 6px solid $color-tertiary;
     border-color: $color-tertiary transparent $color-tertiary transparent;
-    animation: lds 600ms infinite;
-    animation: 1.5s linear 1.5 both lds;
+    animation: 1.5s linear infinite both lds;
 }
 
 .lds-small{
@@ -42,7 +41,7 @@
     border-radius: 50%;
     border: 6px solid $color-secondary;
     border-color: $color-secondary transparent $color-secondary transparent;
-    animation: 1s linear 2 reverse both lds;
+    animation: 750ms linear infinite reverse both lds;
 }
 
 @keyframes lds{
