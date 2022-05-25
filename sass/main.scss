@@ -142,7 +142,6 @@
 
     &:hover{
         @include box-shadow-hover;
-        transform: scale(1.05);
         transition: all 200ms;
     }
 

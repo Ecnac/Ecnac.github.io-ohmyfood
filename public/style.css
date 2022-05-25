@@ -373,7 +373,6 @@ footer > ul > li > a > p {
 }
 .container:hover {
   box-shadow: 0 6px 3px #bababa;
-  transform: scale(1.05);
   transition: all 200ms;
 }
 .container__img {
