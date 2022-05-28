@@ -8,8 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="public/normalize.css">
-        <link rel="stylesheet" href="public/style.css">
+        <link rel="stylesheet" href="public//css/normalize.css">
+        <link rel="stylesheet" href="public/prefixed/style.css">
         <title>Oh My Food</title>
     </head>
 
@@ -23,26 +23,26 @@
         </div>
 
             <!-- HEADER -->
-        <header>
-            <div class="logo-container">
-                <img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo_OhMyFood">
-            </div>
+        <header class="header">
+            <h1 class="header__title">ohmyfood</h1>
         </header>   
         
         <!-- MAIN -->
         <main>
 
             <!-- LOCALISATION -->
-            <section class="localisation">
+            <div class="localisation">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Paris, Belleville</p>
-            </section>
+            </div>
 
             <!-- EXPLORE -->
             <section class="explore">
                 <h2 class="explore__title">Réservez le menu qui vous convient</h2>
                 <p class="explore__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button type="submit" class="btn">Explorer nos restaurants</button>
+                <form action="#">
+                    <input type="submit" class="btn" value="Explorer nos restaurants" />
+                </form>
             </section>
 
             <!-- WORKING -->
@@ -147,7 +147,7 @@
 
             <!-- FOOTER -->
             <footer>
-                <h1>ohmyfood</h1>
+                <h4>ohmyfood</h4>
                 <ul>
                     <li>
                         <a href="#">

@@ -14,7 +14,7 @@ ul {
   padding-left: 0;
 }
 
-h1 {
+h1, h4 {
   font-family: "Shrikhand", cursive;
   font-size: 1.7em;
 }
@@ -35,23 +35,16 @@ h3 {
   font-weight: 500;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  position: relative;
+.header {
+  width: 100%;
 }
-header > .return-icon {
+.header__title {
+  text-align: center;
+}
+.header > .return-icon {
   position: absolute;
   left: 20px;
   font-size: 1.5em;
-}
-header.logo-container {
-  width: 100%;
-}
-header.logo-container > .logo {
-  display: flex;
-  align-items: center;
-  margin: 20px auto;
 }
 
 footer {
@@ -60,7 +53,9 @@ footer {
   width: 100%;
   background-color: #353535;
 }
-footer > h1 {
+footer > h3, footer > h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7em;
   margin: 20px 0 0 5%;
   color: #FFF;
 }
@@ -125,23 +120,21 @@ footer > ul > li > a > p {
   opacity: 0;
 }
 .heart-icon:hover > .heart--fill {
-  transition: opacity 250ms, font-size 500ms;
-  font-size: 1em;
+  transition: opacity 300ms;
   opacity: 1;
 }
 
 .heart-icon > .heart--fill {
   position: absolute;
   left: 50%;
-  bottom: 3px;
-  font-size: 0px;
+  top: 1px;
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity 1000ms, font-size 500ms;
+  transition: opacity 500ms;
 }
 
 .lds {
@@ -253,15 +246,6 @@ footer > ul > li > a > p {
     opacity: 1;
   }
 }
-.logo-container {
-  width: 100%;
-}
-.logo-container > .logo {
-  display: flex;
-  align-items: center;
-  margin: 20px auto;
-}
-
 .localisation {
   display: flex;
   align-items: center;
@@ -311,7 +295,7 @@ footer > ul > li > a > p {
   border-radius: 1.2em;
   background-color: #f6f6f6;
   box-shadow: 0px 5px 5px #bababa;
-  transition: all 300ms;
+  transition: background-color 300ms;
 }
 @media screen and (min-width: 1024px) {
   .working__card {
@@ -347,7 +331,7 @@ footer > ul > li > a > p {
   background-color: #f6f6f6;
 }
 .restaurants > h2 {
-  margin-left: 6%;
+  margin-left: 5%;
 }
 
 .card-container {
@@ -358,6 +342,8 @@ footer > ul > li > a > p {
   .card-container {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
   }
 }
 
@@ -369,11 +355,11 @@ footer > ul > li > a > p {
   margin: auto auto 20px auto;
   border-radius: 1em;
   box-shadow: 0px 5px 5px #bababa;
-  transition: all 200ms;
+  transition: box-shadow 200ms;
 }
 .container:hover {
   box-shadow: 0 6px 3px #bababa;
-  transition: all 200ms;
+  transition: box-shadow 200ms;
 }
 .container__img {
   position: relative;
@@ -438,7 +424,9 @@ footer > ul > li > a > p {
   position: relative;
   margin-left: 20px;
 }
-.menu__title > h1 {
+.menu__title > h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7em;
   margin: 0.6em 0;
 }
 @media screen and (min-width: 1024px) {

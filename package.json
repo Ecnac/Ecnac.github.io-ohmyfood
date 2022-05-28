@@ -4,7 +4,8 @@
   "description": "Projet 3 OpenClassroom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss:public/style.css"
+    "sass": "sass --watch sass/main.scss:public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Jeremy Cance",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Ecnac/ohmyfood/issues"
   },

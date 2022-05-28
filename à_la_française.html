@@ -8,35 +8,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">  
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="public/normalize.css">
-        <link rel="stylesheet" href="public/style.css">
+        <link rel="stylesheet" href="public//css/normalize.css">
+        <link rel="stylesheet" href="public/prefixed/style.css">
         <title>Oh My Food</title>
     </head>
 
     <body>
 
             <!-- HEADER -->
-        <header>
+        <header class="header"> 
             <div class="return-icon">
                 <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
-            <div class="logo-container">
-                <img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo_OhMyFood">
-            </div>
+            <h1 class="header__title">ohmyfood</h1>
         </header>
         
         <!-- MAIN -->
         <main>
 
             <!-- BANNER -->
-            <section class="banner">
+            <div class="banner">
                     <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="banner" alt="A_la_française" width="350" height="280">
-            </section>
+            </div>
 
             <!-- MENU -->
             <section class="menu">
                 <div class="menu__title">
-                    <h1>À la française</h1>
+                    <h2>À la française</h2>
                     <div class="heart-icon">
                         <i class="fa-regular fa-heart heart--empty"></i>
                         <i class="fa-solid fa-heart heart--fill"></i>
@@ -185,15 +183,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="button">
-                    <button type="submit" class="btn">Commander</button>
-                </div>
+                <form action="#" class="button">
+                    <input type="submit" class="btn" value="Commander" />
+                </form>
             </section>
         </main>
         
             <!-- FOOTER -->
             <footer>
-                <h1>ohmyfood</h1>
+                <h3>ohmyfood</h3>
                 <ul>
                     <li>
                         <a href="#">

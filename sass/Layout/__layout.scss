@@ -1,22 +1,15 @@
 // HEADER 
-header{
-    display: flex;
-    align-items: center;
-    position: relative;
+.header{
+    width: 100%;
+
+    &__title{
+        text-align: center;
+    }
 
     &>.return-icon{
         position: absolute;
         left: 20px;
         font-size: 1.5em;
-    }
-
-    &.logo-container{
-        width: 100%;
-        &>.logo{
-            display: flex;
-            align-items: center;
-            margin: 20px auto;
-        }
     }
 }
 
@@ -28,7 +21,9 @@ footer{
     width: 100%;
     background-color: $footer-bg-clr;
 
-    &>h1{
+    &>h3, >h4{
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.7em;
         margin: 20px 0 0 5%;
         color: $footer-txt-color;
     }
