@@ -71,12 +71,12 @@
 
         &:hover{
             @include box-shadow-hover;
-            transition: all 300ms;
+            transition: box-shadow 300ms, background-color 300ms;
             background-color: lighten($color: $color-primary, $amount: 30%);
         }
 
         &:hover > i{
-            transition: all 200ms;
+            transition: color 200ms;
             color: $color-primary;
         }
 
@@ -255,13 +255,12 @@
 .submenu__card{
     display: flex;
     justify-content: space-between;
-    margin: 10px 0 20px 0;
-    margin-bottom: 10px;
+    margin: 10px 0 30px 0;
     background-color: #FFF;
     border-radius: $card-border-radius;
     overflow: hidden;
     @include box-shadow;
-    transition: all 400ms ease-in-out; 
+    transition: box-shadow 400ms ease-in-out; 
 
     @media screen and (min-width: 1024px){
         width: 95%;

@@ -100,12 +100,12 @@ footer > ul > li > a > p {
   background: linear-gradient(349deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0px 5px 5px #bababa;
   padding: 15px 20px;
-  transition: all 200ms;
+  transition: box-shadow 200ms, filter 200ms;
 }
 .btn:hover {
   filter: brightness(1.1);
   cursor: pointer;
-  transition: all 200ms;
+  transition: box-shadow 200ms, filter 200ms;
   box-shadow: 0 6px 3px #bababa;
 }
 
@@ -116,7 +116,7 @@ footer > ul > li > a > p {
   right: 20px;
 }
 .heart-icon:hover > .heart--empty {
-  transition: all 1000ms ease;
+  transition: opacity 1000ms ease;
   opacity: 0;
 }
 .heart-icon:hover > .heart--fill {
@@ -131,7 +131,6 @@ footer > ul > li > a > p {
   transform: translateX(-50%);
   background: linear-gradient(180deg, rgb(165, 105, 237) 0%, rgb(255, 121, 218) 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: opacity 500ms;
@@ -304,11 +303,11 @@ footer > ul > li > a > p {
 }
 .working__card:hover {
   box-shadow: 0 6px 3px #bababa;
-  transition: all 300ms;
+  transition: box-shadow 300ms, background-color 300ms;
   background-color: #e4d5f6;
 }
 .working__card:hover > i {
-  transition: all 200ms;
+  transition: color 200ms;
   color: #9356DC;
 }
 .working__card > p {
@@ -472,13 +471,12 @@ footer > ul > li > a > p {
 .submenu__card {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0 20px 0;
-  margin-bottom: 10px;
+  margin: 10px 0 30px 0;
   background-color: #FFF;
   border-radius: 1em;
   overflow: hidden;
   box-shadow: 0px 5px 5px #bababa;
-  transition: all 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out;
 }
 @media screen and (min-width: 1024px) {
   .submenu__card {
